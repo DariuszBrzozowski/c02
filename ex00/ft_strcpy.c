@@ -2,16 +2,14 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
 	char	*temp;
 	
 	temp = dest;
-	i = 0;
-	while (src[i] != '\0')
+	while (*src != '\0')
 	{
-		dest[i] = src[i];
-		printf("%c", src[i]);
-		i++;
+		*dest = *src;
+		src++;
+		dest++;
 	}
 	return (temp);
 }
