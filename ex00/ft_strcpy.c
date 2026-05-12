@@ -13,12 +13,11 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	return (temp);
 }
-
+/*
 int	main(void)
 {
 	char	str_in [] = "inDarek";
 	char	str_out[20];
 	ft_strcpy(str_out, str_in);
 	printf("%s", str_out);
-}
-
+}*/
