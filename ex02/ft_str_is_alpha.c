@@ -2,20 +2,18 @@
 
 int	ft_str_is_alpha(char *str)
 {
-	int	out;
-
-	out = 1;
-	while (*str != '\0' && out == 1)
+	while (*str != '\0')
 	{
-		if (*str >= 'a'  && *str <= 'z')
-			out = 1;
-		else if (*str >= 'A' && *str <= 'Z')
-			out = 1;
-		else
-			out = 0;
+		if (!(*str >= 'a' && *str <= 'z'))
+		{
+			if (!(*str >= 'A' && *str <= 'Z'))
+			{
+				return (0);
+			}
+		}
 		str++;
 	}
-	return (out);
+	return (1);
 }
 /*
 int main(void)
