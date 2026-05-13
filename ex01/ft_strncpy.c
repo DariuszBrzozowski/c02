@@ -3,10 +3,10 @@
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
-	char	*temp;
+	/*char	*temp;*/
 
 	i = 0;
-	temp = dest;
+	/*temp = dest;*/
 	while (i < n  && src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -18,7 +18,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	return (temp);
+	return (dest);
 }
 /*
 int	main(void)
