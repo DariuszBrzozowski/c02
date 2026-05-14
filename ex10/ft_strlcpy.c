@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
@@ -22,12 +20,18 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	return (j);
 }
-/*
-int	main(void)
+
+int	main(int argc, char *argv[])
 {
+	#include <stdio.h>
+	int l;
 	char d[10];
-	printf("%s", d);
-	char s[] = "DariuszBRZOZOWSKI";
-	ft_strlcpy(d, s, 10);
-	printf("%s", d);
-}*/
+
+	printf("%s\n", d);
+	if (argc > 1)
+	{
+	l = ft_strlcpy(d, argv[1], 10);
+	printf("%s\n", d);
+	printf("%d", l);
+	}
+}
