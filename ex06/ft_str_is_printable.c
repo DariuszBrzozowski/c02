@@ -1,22 +1,21 @@
-/*#include <stdio.h>*/
+#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
-	int	out;
-
-	out = 1;
-	while (*str != '\0' && out == 1)
+	while (*str != '\0')
 	{
-		if (!(*str >= '!'  && *str <= '~'))
-			out = 0;
+		if (*str < 32 || *str > 126)
+			return 0;
 		str++;
 	}
-	return (out);
+	return (1);
 }
-/*
-int main(void)
+
+int main(int argc, char *argv[])
 {
-	char s[] = "dariusz!";
-	printf("%d", ft_str_is_printable(s));
+	if (argc > 1)
+	{
+		printf("%d", ft_str_is_printable(argv[1]));
+	}
 	return (0);
-}*/
+}
