@@ -14,11 +14,10 @@ char	*ft_strcpy(char *dest, char *src)
 	*dest = '\0';
 	return (temp);
 }
-/*
-int	main(void)
+
+int	main(int argc, char *argv[])
 {
-	char	str_in [] = "inDarek";
-	char	str_out[20];
-	ft_strcpy(str_out, str_in);
-	printf("%s", str_out);
-}*/
+	char buff[256] = "foo";
+	ft_strcpy(buff, argv[1]);
+	printf("%s", buff);
+}
