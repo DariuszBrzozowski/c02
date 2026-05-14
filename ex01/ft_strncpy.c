@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
-	/*char	*temp;*/
 
 	i = 0;
-	/*temp = dest;*/
 	while (i < n  && src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -20,12 +19,19 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
+
+int	main(int argc, char *argv[])
 {
-	char d[10];
-	printf("%s", d);
-	char s[] = "DariuszBRZOZOWSKI";
-	ft_strncpy(d, s, 5);
-	printf("%s", d);
-}*/
+	int	i;
+	char 	d[10] = "foo";
+	i = 0;
+	if (argc == 2)
+	{
+		ft_strncpy(d,argv[1], 8);
+		while (d[i] != '\0')
+		{
+			write(1, &d[i], 1);
+			i++;
+		}
+	}
+}
