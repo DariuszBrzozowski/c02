@@ -1,4 +1,4 @@
-/*#include <stdio.h>*/
+#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -15,10 +15,12 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-/*
-int main(void)
+
+int main(int argc, char *argv[])
 {
-	char s[] = "dariusz!";
-	printf("%d", ft_str_is_alpha(s));
+	if (argc == 2)
+	{
+		printf("%d", ft_str_is_alpha(argv[1]));
+	}
 	return (0);
-}*/
+}
