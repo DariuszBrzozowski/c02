@@ -27,7 +27,7 @@ int	main(int argc, char *argv[])
 	i = 0;
 	if (argc == 2)
 	{
-		ft_strncpy(d,argv[1], 8);
+		ft_strncpy(d,argv[1], 10);
 		while (d[i] != '\0')
 		{
 			write(1, &d[i], 1);
