@@ -1,4 +1,4 @@
-/*#include <stdio.h>*/
+#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -13,10 +13,13 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (out);
 }
-/*
-int main(void)
+
+int main(int argc, char *argv[])
 {
-	char s[] = "dariusz!";
-	printf("%d", ft_str_is_numeric(s));
-	return (0);
-}*/
+        if (argc == 2)
+        {
+                printf("%d", ft_str_is_numeric(argv[1]));
+        }
+        return (0);
+}
+
