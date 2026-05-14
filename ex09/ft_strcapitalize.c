@@ -1,11 +1,9 @@
-/*#include <stdio.h>*/
-
 char	*ft_strcapitalize(char *str)
 {
-	char	*start;
+	char	*temp;
 	int	new_word;
 
-	start = str;
+	temp = str;
 	new_word = 1;
 	while (*str != '\0')
 	{
@@ -21,12 +19,16 @@ char	*ft_strcapitalize(char *str)
 			new_word = 1;
 		str++;
 	}
-	return (start);
+	return (temp);
 }
-/*
-int main(void)
+
+int main(int argc, char *argv[])
 {
-	char s[] = "dariusz!";
-	printf("%d", ft_strcapitalize(s));
+	#include <stdio.h>
+
+	if (argc > 1)
+	{
+		printf("%s", ft_strcapitalize(argv[1]));
+	}
 	return (0);
-}*/
+}
