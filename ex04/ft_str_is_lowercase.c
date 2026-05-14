@@ -1,22 +1,21 @@
-/*#include <stdio.h>*/
+#include <stdio.h>
 
 int	ft_str_is_lowercase(char *str)
 {
-	int	out;
-
-	out = 1;
-	while (*str != '\0' && out == 1)
+	while (*str != '\0')
 	{
 		if (!(*str >= 'a'  && *str <= 'z'))
-			out = 0;
+			return (0);
 		str++;
 	}
-	return (out);
+	return (1);
 }
-/*
-int main(void)
+
+int main(int argc, char *argv[])
 {
-	char s[] = "dariusz!";
-	printf("%d", ft_str_is_lowercase(s));
+	if (argc == 2)
+	{
+		printf("%d", ft_str_is_lowercase(argv[1]));
+	}
 	return (0);
-}*/
+}
